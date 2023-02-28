@@ -18,6 +18,7 @@ let Teams = [
 ]
 
 
+
 for (let i = 0; i < Teams.length; i++) {
   document.write("<h5>Team: " + Teams[i]["name"] + "</h5>");
   document.write("<h5>Favourite player: " + Teams[i]["favPlayer"] + "</h5>");
@@ -25,11 +26,19 @@ for (let i = 0; i < Teams.length; i++) {
   document.writeln("")
 }
 
-function re(Teams){
-  return re;
+function most_s(Teams) {
+    s = 0;
+    for(let i = 0; i < 4; i++){
+        s += Teams[i]['titles'];
+    }
+    return s;
 }
-console.log(Teams)
 
+function best_team(Teams){
+    return Teams[0]
+}
+
+document.write("<h5>most_s: " + most_s(Teams) / 4 + " gold</h5>")
 
 
 
